@@ -1,0 +1,16 @@
+<div ng-controller="TwoController" class="col-md-6">
+  <h2 class="lead text-center">
+    Search Results
+  </h2>
+  <div class="movie">
+    <div ng-show="infoFromServer.response.data" class="well">
+      <img ng-src="{{infoFromServer.response.data.Poster}}" />
+      <p> {{ infoFromServer.response.data.Title }} </p>
+      <p> {{ infoFromServer.response.data.Year }} </p>
+      <p> {{ infoFromServer.response.data.Director }} </p>
+      <p> {{ infoFromServer.response.data.Genre }} </p>
+      <p> {{ infoFromServer.response.data.Plot }} </p>
+      <button class="btn btn-success" ng-show="infoFromServer.response.data" ng-click="addToFav()">Favorite</button>
+    </div>
+  </div>
+</div>

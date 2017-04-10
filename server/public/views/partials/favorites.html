@@ -1,0 +1,9 @@
+<div ng-controller="ThreeController" class="col-md-6">
+  <h2 class="text-center lead"> Favorites List </h2>
+    <div ng-repeat="movie in favoriteList track by $index">
+      <div class="well">
+          <img style="height: 50px" ng-src="{{movie.Poster}}" />
+          <span class="lead"> {{ '  ' + movie.Title }} </span>
+      </div>
+    </div>
+</div>
